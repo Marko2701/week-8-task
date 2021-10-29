@@ -1,0 +1,160 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+  
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background: #e0dbdbab;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+  
+.player {
+    max-width: 750px;
+    position: relative;
+    overflow: hidden;
+}
+  
+.player__video {
+    width: 100%;
+}
+
+.player__controls-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  transform: translateY(100%) translateY(-5px);
+  transition: all .3s;
+  flex-wrap: wrap;
+}
+
+.player__controls-left {
+  display: flex;
+  align-items: center;
+}
+
+.player__controls-right {
+  display: flex;
+  align-items: center;
+}
+
+.progress {
+  position: relative;
+  display: flex;
+  flex-basis: 100%;
+  cursor: pointer;
+}
+
+.progress__filled {
+  background: #c52a2a;
+}
+
+.player:hover .player__controls-wrapper {
+  transform: translateY(0);
+}
+
+.player:hover .progress {
+  height: 15px;
+}
+  
+.player__button {
+    background: none;
+    border: 0;
+    line-height: 1;
+    color: white;
+    text-align: center;
+    outline: 0;
+    padding: 0 20px;
+    cursor: pointer;
+    max-width: 50px;
+}
+
+.player__volume {
+    padding: 0;
+  }
+
+.player__slider {
+    width: 10px;
+    height: 30px;
+}
+
+.player__time {
+    display: flex;
+    color: white;
+    padding-left: 10px;
+}
+
+.player__slash {
+  padding: 0 5px;
+}
+
+.player__cog {
+  position: relative;
+  padding: 0;
+}
+
+.player__speed {
+  display: none;
+}
+
+.player__speed--active {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 30px;
+  right: 32px;
+}
+
+.player__speed-rate {
+  background: rgb(124, 126, 128);
+  color: white;
+  font-weight: bolder;
+}
+
+.player__default:enabled {
+  color: #c52a2a;
+}
+
+input[type=range] {
+    -webkit-appearance: none;
+    background: transparent;
+    width: 80px;
+    margin: 0 5px;
+}
+  
+input[type=range]:focus {
+    outline: none;
+}
+  
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0), 0 0 1px rgba(13, 13, 13, 0);
+    background: rgba(255,255,255,0.8);
+    border-radius: 1.3px;
+    border: 0.2px solid rgba(1, 1, 1, 0);
+}
+  
+input[type=range]::-webkit-slider-thumb {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background: #c52a2a;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -4px;
+    box-shadow:0 0 2px rgba(0,0,0,0.2);
+}
+  
+
+  
+  
+  
+ 
