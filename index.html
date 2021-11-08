@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Video Player</title>
+</head>
+<body>
+    <div class="player">
+        <video class="player__video viewer" src="gladiator.mp4"></video>
+   
+        <div class="player__controls-wrapper">
+          <div class="progress">
+            <div class="progress__filled"></div>
+           </div>
+          <div class="player__controls-left">
+            <button class="player__button toggle" title="Toggle Play"><i class="fas fa-play"></i></button>
+            <button class="player__button player__volume"><i class="fas fa-volume-up"></i></button>
+            <input type="range" name="volume" class="player__slider" min="0" max="1" step="0.05" value="1">
+            <div class="player__time">
+              <div class="player__current"></div>
+              <span class="player__slash">/</span>
+              <div class="player__duration"></div>
+            </div>
+          </div>
+          <div class="player__controls-right">
+            <button class="player__button player__cog"><i class="fas fa-cog"></i></button>
+            <div class="player__speed">
+              <button class="player__speed-rate">2.00x</button>
+              <button class="player__speed-rate">1.50x</button>
+              <button class="player__speed-rate player__default">1.00x</button>
+              <button class="player__speed-rate">0.75x</button>
+              <button class="player__speed-rate">0.50x</button>
+            </div>
+            <button class="player__button player__fullscreen"><i class="fas fa-expand"></i></button>
+          </div>
+        </div>
+      </div>
+   
+     <script src="main.js"></script>
+</body>
+</html>
